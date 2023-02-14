@@ -1,3 +1,3 @@
 export default function Header() {
-  return 'Header';
+  return <h1>O que você está procurando?</h1>;
 }
