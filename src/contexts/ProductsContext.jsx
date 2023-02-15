@@ -7,6 +7,7 @@ export const ProductsContext = createContext();
 export function CustomProductsProvider(props) {
   const [filterText, setFilterText] = useState('');
   const [products, setProducts] = useState([]);
+  const [categories, setCategories] = useState([]);
 
   const handleFilterText = (event) => {
     setFilterText(event.target.value);
@@ -18,10 +19,18 @@ export function CustomProductsProvider(props) {
       .then((parsedData) => setProducts(parsedData.data.nodes));
   }, []);
 
+  useEffect(() => {
+    fetch('../../data/products.json')
+      .then((response) => response.json())
+      .then((parsedJson) => parsedJson.data.nodes)
+      .then((products) => setCategories(products.map((product) => product.category)));
+  }, []);
+
   return (
     <ProductsContext.Provider
       value={{
         products,
+        categories,
         handleFilterText,
         filterText,
       }}
