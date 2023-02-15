@@ -5,7 +5,12 @@ import { createContext, useState, useEffect } from 'react';
 export const ProductsContext = createContext();
 
 export function CustomProductsProvider(props) {
+  const [filterText, setFilterText] = useState('');
   const [products, setProducts] = useState([]);
+
+  const handleFilterText = (event) => {
+    setFilterText(event.target.value);
+  };
 
   useEffect(() => {
     fetch('../../data/products.json')
@@ -17,6 +22,8 @@ export function CustomProductsProvider(props) {
     <ProductsContext.Provider
       value={{
         products,
+        handleFilterText,
+        filterText,
       }}
     >
       {props.children}

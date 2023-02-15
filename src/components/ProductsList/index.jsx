@@ -5,11 +5,18 @@ import ProductCard from '../ProductCard';
 import { ProductsContainer } from './styles';
 
 export default function ProductsList() {
-  const { products } = useContext(ProductsContext);
+  const { products, filterText } = useContext(ProductsContext);
 
   return (
     <ProductsContainer>
-      {products.map((product) => (
+      {filterText
+      && products.filter(
+        (product) => product.name.toLowerCase().includes(filterText),
+      )
+        .map((product) => (
+          <ProductCard key={product.id} data={product} />
+        ))}
+      {!filterText && products.map((product) => (
         <ProductCard key={product.id} data={product} />
       ))}
     </ProductsContainer>
