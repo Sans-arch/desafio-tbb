@@ -52,4 +52,19 @@ export const Filters = styled.div`
       background: #0d0d0d;
     }
   }
+
+  // Mobile configs
+  @media (max-width: 600px) {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+
+    button {
+      width: 40%;
+      height: 70px;
+      margin-bottom: 20px;
+      margin-right: 10px;
+      margin-left: 10px;
+    }
+  }
 `;
