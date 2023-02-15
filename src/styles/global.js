@@ -10,7 +10,7 @@ export default createGlobalStyle`
 
   body {
     font-size: 16px;
-    background: #262626;
+    background: ${({ theme }) => theme.backgroundColor};
     color: #fff;
     box-sizing: border-box;
   }
@@ -23,12 +23,12 @@ export default createGlobalStyle`
 
   /* Track */
   ::-webkit-scrollbar-track {
-    background: #0d0d0d;
+    background: ${({ theme }) => theme.scrollBarBackgroundColor};
   }
 
   /* Handle */
   ::-webkit-scrollbar-thumb {
-    background: #888;
+    background: ${({ theme }) => theme.scrollBarBackgroundThumbColor};
   }
 
   /* Handle on hover */

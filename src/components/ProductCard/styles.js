@@ -4,7 +4,7 @@ export const ProductContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  background: #0d0d0d;
+  background: ${({ theme }) => theme.cardBackground};
   color: #fff;
   width: 500px;
   margin: 0 50px 50px 0;

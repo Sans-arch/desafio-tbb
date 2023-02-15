@@ -1,3 +1,4 @@
+import { CustomThemeProvider } from '../contexts/ThemeContext';
 import { CustomProductsProvider } from '../contexts/ProductsContext';
 
 import GlobalStyle from '../styles/global';
@@ -10,16 +11,18 @@ import ProductsList from '../components/ProductsList';
 
 function App() {
   return (
-    <CustomProductsProvider>
-      <GlobalStyle />
+    <CustomThemeProvider>
+      <CustomProductsProvider>
+        <GlobalStyle />
 
-      <Container>
-        <Header />
-        <Filter />
-        <ProductsList />
-        {/* <Footer /> */}
-      </Container>
-    </CustomProductsProvider>
+        <Container>
+          <Header />
+          <Filter />
+          <ProductsList />
+          {/* <Footer /> */}
+        </Container>
+      </CustomProductsProvider>
+    </CustomThemeProvider>
   );
 }
 

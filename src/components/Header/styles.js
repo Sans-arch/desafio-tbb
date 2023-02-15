@@ -2,14 +2,15 @@ import styled from 'styled-components';
 
 export const Container = styled.header`
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
+  align-items: center;
   position: sticky;
   top: 0;
   width: 100%;
   height: 100%;
-  background-color: #0d0d0d;
-  padding: 1rem;
+  background: ${({ theme }) => theme.headerBackgroundColor};
   z-index: 10;
+  padding: 1rem;
 
   img {
     width: 130px;
@@ -17,6 +18,13 @@ export const Container = styled.header`
     &:hover {
       opacity: 0.85;
     }
+  }
+
+  button {
+    background: transparent;
+    border: none;
+    font-size: 30px;
+    cursor: pointer;
   }
 
   // Mobile configs
