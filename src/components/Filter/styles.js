@@ -15,4 +15,11 @@ export const Container = styled.div`
   input {
     width: 30%;
   }
+
+  // Mobile configs
+  @media (max-width: 600px) {
+    input {
+      width: 85%;
+    }
+  }
 `;

@@ -16,6 +16,17 @@ export const ProductContainer = styled.div`
   img {
     width: 120px;
   }
+
+  // Mobile configs
+  @media (max-width: 600px) {
+    margin: 0;
+    width: 90%;
+    margin-bottom: 30px;
+
+    &:last-child {
+      margin-bottom: 0px;
+    }
+  }
 `;
 
 export const ProductImg = styled.div`
