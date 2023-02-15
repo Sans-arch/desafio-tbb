@@ -1,9 +1,6 @@
 import styled from 'styled-components';
 
 export const ProductsContainer = styled.div`
-  /* margin-top: 20px; */
-  /* margin-bottom: 20px; */
-  /* border: 2px solid red; */
   display: flex;
   flex-wrap: wrap;
   justify-content: center;

@@ -22,7 +22,6 @@ export const Container = styled.div`
 `;
 
 export const Filters = styled.div`
-  /* border: 2px solid blue; */
   display: flex;
   justify-content: center;
   align-items: center;
