@@ -5,9 +5,12 @@ export default createGlobalStyle`
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
   }
 
   body {
-    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    background: #262626;
+    color: #fff;
   }
 `;
