@@ -12,5 +12,4 @@ export default styled.input`
   &::placeholder {
     color: #BCBCBC;
   }
-
 `;

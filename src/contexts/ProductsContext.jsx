@@ -23,7 +23,9 @@ export function CustomProductsProvider(props) {
     fetch('../../data/products.json')
       .then((response) => response.json())
       .then((parsedJson) => parsedJson.data.nodes)
-      .then((products) => setCategories(products.map((product) => product.category)));
+      .then((products) => setCategories(
+        Array.from(new Set(products.map((product) => product.category.name))),
+      ));
   }, []);
 
   return (
