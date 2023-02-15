@@ -6,11 +6,16 @@ export const ProductsContext = createContext();
 
 export function CustomProductsProvider(props) {
   const [filterText, setFilterText] = useState('');
+  const [selectedProductFilter, setSelectedProductFilter] = useState(null);
   const [products, setProducts] = useState([]);
   const [categories, setCategories] = useState([]);
 
   const handleFilterText = (event) => {
     setFilterText(event.target.value);
+  };
+
+  const handleSelectedProductFilter = (event) => {
+    setSelectedProductFilter(event.target.value);
   };
 
   useEffect(() => {
@@ -33,8 +38,10 @@ export function CustomProductsProvider(props) {
       value={{
         products,
         categories,
-        handleFilterText,
         filterText,
+        selectedProductFilter,
+        handleFilterText,
+        handleSelectedProductFilter,
       }}
     >
       {props.children}

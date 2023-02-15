@@ -5,8 +5,9 @@ import { Container, Filters } from './styles';
 import Input from '../Input';
 
 export default function Filter() {
-  const { handleFilterText, categories } = useContext(ProductsContext);
-  // console.log(categories);
+  const {
+    handleFilterText, handleSelectedProductFilter, categories,
+  } = useContext(ProductsContext);
 
   return (
 
@@ -18,7 +19,12 @@ export default function Filter() {
       />
       <Filters>
         {categories.map((category) => (
-          <button type="button" key={category}>
+          <button
+            type="button"
+            key={category}
+            value={category}
+            onClick={handleSelectedProductFilter}
+          >
             {category}
           </button>
         ))}
