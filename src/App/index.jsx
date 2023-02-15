@@ -6,7 +6,7 @@ import { Container } from './styles';
 import Header from '../components/Header';
 import Filter from '../components/Filter';
 import ProductsList from '../components/ProductsList';
-import Footer from '../components/Footer';
+// import Footer from '../components/Footer';
 
 function App() {
   return (
@@ -17,7 +17,7 @@ function App() {
         <Header />
         <Filter />
         <ProductsList />
-        <Footer />
+        {/* <Footer /> */}
       </Container>
     </CustomProductsProvider>
   );

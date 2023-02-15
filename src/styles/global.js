@@ -12,6 +12,7 @@ export default createGlobalStyle`
     font-size: 16px;
     background: #262626;
     color: #fff;
+    box-sizing: border-box;
   }
 
   // Custom Scrollbar
