@@ -1,13 +1,16 @@
+import { CustomProductsProvider } from '../contexts/ProductsContext';
+
 import GlobalStyle from '../styles/global';
-import Header from '../components/Header';
 import { Container } from './styles';
+
+import Header from '../components/Header';
+import Filter from '../components/Filter';
 import ProductsList from '../components/ProductsList';
 import Footer from '../components/Footer';
-import Filter from '../components/Filter';
 
 function App() {
   return (
-    <>
+    <CustomProductsProvider>
       <GlobalStyle />
 
       <Container>
@@ -16,7 +19,7 @@ function App() {
         <ProductsList />
         <Footer />
       </Container>
-    </>
+    </CustomProductsProvider>
   );
 }
 
