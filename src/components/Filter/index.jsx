@@ -6,11 +6,10 @@ import Input from '../Input';
 
 export default function Filter() {
   const {
-    handleFilterText, handleSelectedProductFilter, categories,
+    handleFilterText, handleSelectedProductFilter, categories, selectedProductFilter,
   } = useContext(ProductsContext);
 
   return (
-
     <Container>
       <Input
         type="text"
@@ -18,7 +17,34 @@ export default function Filter() {
         onChange={handleFilterText}
       />
       <Filters>
-        {categories.map((category) => (
+        {selectedProductFilter && categories.map((category) => {
+          if (category === selectedProductFilter) {
+            return (
+              <button
+                type="button"
+                key={category}
+                value={category}
+                onClick={handleSelectedProductFilter}
+                style={{ backgroundColor: '#0d0d0d' }}
+              >
+                {category}
+              </button>
+            );
+          }
+
+          return (
+            <button
+              type="button"
+              key={category}
+              value={category}
+              onClick={handleSelectedProductFilter}
+            >
+              {category}
+            </button>
+          );
+        })}
+
+        {!selectedProductFilter && categories.map((category) => (
           <button
             type="button"
             key={category}

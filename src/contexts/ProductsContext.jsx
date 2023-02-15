@@ -15,7 +15,13 @@ export function CustomProductsProvider(props) {
   };
 
   const handleSelectedProductFilter = (event) => {
-    setSelectedProductFilter(event.target.value);
+    // setSelectedProductFilter((prevState) => {
+    //   console.log(prevState);
+    //   return event.target.value;
+    // });
+    setSelectedProductFilter((prevState) => (
+      prevState === event.target.value ? null : event.target.value
+    ));
   };
 
   useEffect(() => {
