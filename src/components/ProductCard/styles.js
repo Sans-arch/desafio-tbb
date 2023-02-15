@@ -6,10 +6,12 @@ export const ProductContainer = styled.div`
   align-items: center;
   background: #0d0d0d;
   color: #fff;
+  height: 300px;
   width: 500px;
-  margin: 0 10px 20px 0;
+  margin: 0 50px 50px 0;
   border: none;
   border-radius: 12px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.54);
 
   img {
     width: 120px;

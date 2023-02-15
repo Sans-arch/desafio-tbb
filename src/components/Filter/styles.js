@@ -7,10 +7,12 @@ export const Container = styled.div`
   display: flex;
   justify-content: center;
 
-  margin-top: 40px;
-  margin-bottom: 40px;
+  padding: 60px 0 60px 0;
+
+  /* margin-top: 40px; */
+  /* margin-bottom: 40px; */
 
   input {
-    width: 70%;
+    width: 30%;
   }
 `;

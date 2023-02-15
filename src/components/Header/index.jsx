@@ -1,9 +1,11 @@
-import { Container, Title } from './styles';
+import { Container } from './styles';
+
+import logoTbb from '../../assets/logo.png';
 
 export default function Header() {
   return (
     <Container>
-      <Title>O que você está procurando?</Title>
+      <img src={logoTbb} alt="Logo The Brooklyn Brothers" />
     </Container>
   );
 }

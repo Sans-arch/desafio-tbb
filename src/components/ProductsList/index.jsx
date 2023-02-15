@@ -11,7 +11,7 @@ export default function ProductsList() {
     <ProductsContainer>
       {filterText
       && products.filter(
-        (product) => product.name.toLowerCase().includes(filterText),
+        (product) => product.name.toLowerCase().includes(filterText.toLowerCase()),
       )
         .map((product) => (
           <ProductCard key={product.id} data={product} />
