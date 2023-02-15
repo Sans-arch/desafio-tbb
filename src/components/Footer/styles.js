@@ -8,4 +8,14 @@ export const Container = styled.footer`
   height: 100%;
   background-color: #0d0d0d;
   padding: 0.5rem;
+
+  // Mobile configs
+  @media (max-width: 600px) {
+    padding: 15px 0 15px 0;
+
+    span {
+      text-align: center;
+      width: 75%;
+    }
+  }
 `;
