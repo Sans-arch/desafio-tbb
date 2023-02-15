@@ -17,12 +17,18 @@ export const ProductContainer = styled.div`
     width: 120px;
   }
 
+  transition: transform 250ms;
+
+  &:hover {
+    transform: translateY(-20px);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.84);
+  }
+
   // Mobile configs
   @media (max-width: 600px) {
     margin: 0;
     width: 90%;
     margin-bottom: 30px;
-
 
     &:last-child {
       margin-bottom: 0px;
