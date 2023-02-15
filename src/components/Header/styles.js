@@ -9,6 +9,7 @@ export const Container = styled.header`
   height: 100%;
   background-color: #0d0d0d;
   padding: 1rem;
+  z-index: 10;
 
   img {
     width: 130px;

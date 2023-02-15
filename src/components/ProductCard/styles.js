@@ -13,15 +13,21 @@ export const ProductContainer = styled.div`
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.54);
   padding: 16px;
 
-  img {
-    width: 120px;
-  }
-
-  transition: transform 250ms;
+  transition: transform 650ms;
 
   &:hover {
     transform: translateY(-20px);
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.84);
+  }
+
+  img {
+    width: 120px;
+
+    transition: transform 350ms;
+
+    &:hover {
+      transform: translateY(-10px);
+    }
   }
 
   // Mobile configs
