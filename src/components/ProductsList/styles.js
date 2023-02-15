@@ -6,4 +6,7 @@ export const ProductsContainer = styled.div`
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  /* border: 2px solid red; */
+  width: 100%;
+  height: 100%;
 `;
