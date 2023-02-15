@@ -1,15 +1,9 @@
 import styled from 'styled-components';
 
-export const Product = styled.div`
+export const ProductsContainer = styled.div`
+  margin-top: 20px;
+  margin-bottom: 20px;
   display: flex;
-  flex-direction: column;
-  background: #0d0d0d;
-  color: #fff;
-  width: 600px;
-  border: 2px solid black;
-
-  & + & {
-    margin-top: 10px;
-    margin-bottom: 10px;
-  }
+  flex-wrap: wrap;
+  justify-content: center;
 `;
