@@ -22,7 +22,6 @@ export const ProductContainer = styled.div`
     margin: 0;
     width: 90%;
     margin-bottom: 30px;
-    height: 300px;
 
 
     &:last-child {
